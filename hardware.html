@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Mac Repair | RVA Mac</title>
+    <style>
+        /* --- SHARED STYLES --- */
+        :root {
+            --bg-color: #ffffff;
+            --bg-secondary: #f5f5f7;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --accent-blue: #0071e3;
+            --accent-hover: #0077ed;
+            --nav-bg: rgba(255, 255, 255, 0.8);
+            --glass-blur: saturate(180%) blur(20px);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+        ul { list-style: none; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 48px;
+            background: var(--nav-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo { font-weight: 600; font-size: 16px; }
+        
+        .back-link { 
+            font-size: 12px; 
+            color: var(--accent-blue); 
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 160px 20px 100px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tagline {
+            color: var(--accent-blue);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .hero h1 { font-size: 56px; line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 24px; color: var(--text-secondary); margin-bottom: 40px; }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 980px;
+            font-size: 17px;
+            background-color: var(--accent-blue);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .btn:hover { background-color: var(--accent-hover); }
+
+        /* --- FEATURES GRID --- */
+        .bg-grey { background-color: var(--bg-secondary); padding: 100px 20px; }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 2px 4px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover { transform: translateY(-5px); }
+
+        .feature-icon { font-size: 32px; margin-bottom: 20px; display: block; }
+        .feature-card h3 { font-size: 24px; margin-bottom: 15px; }
+        .feature-card p { color: var(--text-secondary); font-size: 17px; margin-bottom: 20px; }
+        
+        .feature-list li {
+            font-size: 15px;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .feature-list li::before {
+            content: "•";
+            color: var(--accent-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* --- BOTTOM CTA --- */
+        .cta-section { padding: 100px 20px; text-align: center; }
+        .cta-section h2 { font-size: 40px; margin-bottom: 20px; }
+        .cta-section p { font-size: 20px; color: var(--text-secondary); margin-bottom: 30px; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--bg-secondary);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-secondary);
+            border-top: 1px solid #d2d2d7;
+        }
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 40px; }
+            .hero p { font-size: 20px; }
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">RVA Mac</a>
+            <a href="index.html" class="back-link">Close ✕</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <span class="tagline">Hardware Services</span>
+        <h1>Mac Repair</h1>
+        <p>Screen replacements, battery upgrades, and logic board diagnostics done right.</p>
+        <a href="mailto:rvamacintosh@gmail.com?subject=Hardware%20Repair%20Request" class="btn">Get a Quote</a>
+    </section>
+
+    <section class="bg-grey">
+        <div class="grid-container">
+            
+            <div class="feature-card">
+                <span class="feature-icon">🖥️</span>
+                <h3>Screen Repair</h3>
+                <p>Cracked glass or dead pixels? We replace Retina displays with precision.</p>
+                <ul class="feature-list">
+                    <li>LCD & Glass Replacement</li>
+                    <li>Display Hinge Repair</li>
+                    <li>True Tone Calibration</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🔋</span>
+                <h3>Battery & Power</h3>
+                <p>Don't let a dying battery slow you down. Restore your Mac's all-day life.</p>
+                <ul class="feature-list">
+                    <li>Battery Replacement</li>
+                    <li>Charging Port Repair</li>
+                    <li>Trackpad & Keyboard Fixes</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">⚙️</span>
+                <h3>Logic Board Diagnostics</h3>
+                <p>Complex issues require expert tools. We diagnose what others can't.</p>
+                <ul class="feature-list">
+                    <li>Water Damage Cleaning</li>
+                    <li>Component Level Repair</li>
+                    <li>Parts Replacement</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Broken Mac? We can fix it.</h2>
+        <p>Fast turnaround times and a 90-day warranty on all hardware repairs.</p>
+            <p><strong>Phone:</strong> (804) 601-6123</p>
+            <p>Richmond, VA</p>
+            <br>
+            <a href="mailto:rvamacintosh@gmail.com?subject=Hardware%20Repair%20Request" class="btn">Book Repair</a>
+    </section>
+
+    <footer>
+        <p>Copyright © 2024 RVA Mac. All rights reserved.</p>
+        <p style="margin-top: 10px;">
+            <a href="index.html">Home</a> &nbsp;|&nbsp; 
+            <a href="privacy.html">Privacy</a> &nbsp;|&nbsp; 
+            <a href="terms.html">Terms</a>
+        </p>
+    </footer>
+
+</body>
+</html>
