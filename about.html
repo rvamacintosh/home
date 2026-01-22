@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>About Us | RVA Mac</title>
+    <style>
+        /* --- SHARED STYLES --- */
+        :root {
+            --bg-color: #ffffff;
+            --bg-secondary: #f5f5f7;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --accent-blue: #0071e3;
+            --accent-hover: #0077ed;
+            --nav-bg: rgba(255, 255, 255, 0.8);
+            --glass-blur: saturate(180%) blur(20px);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 48px;
+            background: var(--nav-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo { font-weight: 600; font-size: 16px; }
+        .back-link { font-size: 12px; color: var(--accent-blue); font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 160px 20px 80px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 { font-size: 56px; line-height: 1.1; margin-bottom: 30px; }
+        
+        .mission-text {
+            font-size: 24px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* --- THE TEAM / FOUNDER SECTION --- */
+        .bg-grey { background-color: var(--bg-secondary); padding: 100px 20px; }
+        
+        .profile-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center; /* Vertically centers the text with the image */
+            gap: 60px;
+            text-align: left;
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 4px 8px 24px rgba(0,0,0,0.08);
+            flex-shrink: 0; /* Prevents image from squishing */
+        }
+
+        .profile-content h2 { font-size: 40px; margin-bottom: 10px; }
+        .profile-role { 
+            color: var(--accent-blue); 
+            font-size: 19px; 
+            font-weight: 600; 
+            margin-bottom: 25px; 
+            display: block; 
+        }
+        .profile-bio { font-size: 17px; color: var(--text-secondary); margin-bottom: 30px; }
+        
+        .linkedin-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            background-color: #0077b5; /* LinkedIn Blue */
+            padding: 10px 20px;
+            border-radius: 980px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .linkedin-btn:hover { background-color: #006097; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--bg-secondary);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-secondary);
+            border-top: 1px solid #d2d2d7;
+        }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 800px) {
+            .hero h1 { font-size: 40px; }
+            .mission-text { font-size: 20px; }
+            
+            /* Stack the profile on mobile */
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            .profile-img { width: 200px; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">RVA Mac</a>
+            <a href="index.html" class="back-link">Close ✕</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>About RVA Mac.</h1>
+        <p class="mission-text">
+            We started RVA Mac with a simple mission: to provide technical support that feels human. 
+            Whether you are a creative professional, a small business owner, or just need your laptop fixed, 
+            we treat your technology with the precision and care it deserves.
+        </p>
+    </section>
+
+    <section class="bg-grey">
+        <div class="profile-container">
+            <img src="IMG_1738.jpg" 
+                 alt="Jeremiah Nelson" 
+                 class="profile-img">
+            
+            <div class="profile-content">
+                <h2>Jeremiah Nelson</h2>
+                <span class="profile-role">Owner & Lead Consultant</span>
+                
+                <p class="profile-bio">
+                    With extensive experience in technical support and IT consultation, Jeremiah founded RVA Mac to bridge the gap between complex enterprise technology and personal service.
+                    <br><br>
+                    We believe that great support isn't just about fixing computers—it's about empowering the people who use them. Our background ensures that RVA Mac delivers the rigorous standards of corporate IT with the friendly, accessible touch of a local business.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2024 RVA Mac. All rights reserved.</p>
+        <p style="margin-top: 10px;">
+            <a href="index.html">Home</a> &nbsp;|&nbsp; 
+            <a href="privacy.html">Privacy</a> &nbsp;|&nbsp; 
+            <a href="terms.html">Terms</a>
+        </p>
+    </footer>
+
+</body>
+</html>
